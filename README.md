@@ -95,13 +95,5 @@ pprp这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所�
 
 
 
-**过程不易，给个 star ~**
-
-
-
-
-
-
-
-> 最后再次致谢：[pprp的landmark_annotation](https://github.com/pprp/landmark_annotation)
+**过程不易，给个star~**
 
