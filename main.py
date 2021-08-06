@@ -15,20 +15,12 @@ import h5py
 
 from Frame import Ui_MainWindow
 
-# 用python代码模拟键盘输入。原本想解决的问题是QListWidget会使键盘监听失败，按一下Alt键会恢复监听。这里的作用就是模拟键盘按下Alt键   https://cloud.tencent.com/developer/article/1566445
-# import win32api  
-# import win32con
-# win32api.keybd_event(18,0,0,0)  # Alt的键号是18
-# win32api.keybd_event(18,0,win32con.KEYEVENTF_KEYUP,0)
 
 
 class MyMainForm(QMainWindow,Ui_MainWindow):
     def __init__(self):
         super(MyMainForm,self).__init__()
         self.setupUi(self)
-        #loadUi("./ui.ui", self)  #加载UI文件到self
-
-        
 
         self.setWindowIcon(QIcon('logo.ico'))
         self.setWindowTitle('关键点标注工具')
@@ -38,25 +30,15 @@ class MyMainForm(QMainWindow,Ui_MainWindow):
         desktop_height = QApplication.desktop().screenGeometry().height()
         desktop_width = QApplication.desktop().screenGeometry().width()
 
-        # self.setFixedSize(desktop_width, desktop_height )   # 固定大小
-        # self.setStyleSheet('background-color:#2C3E50;')    # 背景颜色填充
+
         self.layout_width = desktop_width-220
         self.layout_height = desktop_height-80
 
 
-        # 坑：如果是建立的界面是QWidget类的，就只需要加下面的第三句，就可以实现鼠标不按下也能跟随 ； 如果是建立的界面是QMainWindow类的，只用第三句没有效果，需要用下面的三条语句在一块才可以
-        # setCentralWidget是函数，centralwidget可以在ui文件里找到。     
-        # https://www.codeleading.com/article/20072274463/
         self.setCentralWidget(self.centralwidget)
         self.centralwidget.setMouseTracking(True)
         self.setMouseTracking(True)   
 
-          
-
-
-        # 坑：当Qt的控件QListWidget或QTableView嵌入到主窗口之后，他本身也会接受按键事件，所以获得焦点时，按键点击并不会触发主窗口的keyPressEvent()函数，也就是说监听冲突了    #
-        # 解决方法就是添加下面这一句，让其不处理按键事件。也可以在qtdesigner中设置，选中这个这个控件后，右侧的属性编辑器里面有一项是focusPolicy，选择NoFocus即可    
-        # https://blog.csdn.net/u010189457/article/details/53149805
         self.listWidget.setFocusPolicy(Qt.NoFocus)   
 
 
@@ -236,7 +218,7 @@ class MyMainForm(QMainWindow,Ui_MainWindow):
             
 
                         
-        self.img_resize()  # 最后再resize，因为加载标签的时候用到了图的尺寸来过滤一部分越界的标注点
+        self.img_resize()  
         self.update()
 
 
@@ -282,9 +264,9 @@ class MyMainForm(QMainWindow,Ui_MainWindow):
             h5['annPoints'] = self.pos_xy
             h5['num'] = len(self.pos_xy)
         elif self.label_format=='json':
-            pic = open(self.imagepath, 'rb')  # 以二进制读取图片
+            pic = open(self.imagepath, 'rb')  
             data = pic.read()
-            encodestr = base64.b64encode(data) # 得到 byte 编码的数据
+            encodestr = base64.b64encode(data) 
             encodestr = str(encodestr,'utf-8')
            
             Dict = {}
@@ -473,6 +455,5 @@ class MyMainForm(QMainWindow,Ui_MainWindow):
 if __name__=='__main__':
     app=QApplication(sys.argv)
     w=MyMainForm()
-    #w.showFullScreen()
     w.show()
     sys.exit(app.exec_())
