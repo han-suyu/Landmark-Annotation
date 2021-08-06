@@ -25,7 +25,7 @@ pprp这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所�
 
 
 
-## 软件介绍
+## 工具介绍
 
 - 整体外观
 
@@ -92,6 +92,8 @@ pprp这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所�
 
 
 录了一个无声的小视频来展示一操作的效果：https://www.bilibili.com/video/BV17o4y1D7d4/
+
+
 
 **过程不易，给个 star ~**
 
