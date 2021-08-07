@@ -120,19 +120,6 @@ class Ui_MainWindow(object):
         self.format.setFont(font)
         self.format.setObjectName("format")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1920, 23))
-        self.menuBar.setObjectName("menuBar")
-        self.menuhelp = QtWidgets.QMenu(self.menuBar)
-        self.menuhelp.setObjectName("menuhelp")
-        MainWindow.setMenuBar(self.menuBar)
-        self.actioninstructions = QtWidgets.QAction(MainWindow)
-        self.actioninstructions.setObjectName("actioninstructions")
-        self.actionabout = QtWidgets.QAction(MainWindow)
-        self.actionabout.setObjectName("actionabout")
-        self.menuhelp.addAction(self.actioninstructions)
-        self.menuhelp.addAction(self.actionabout)
-        self.menuBar.addAction(self.menuhelp.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -147,9 +134,6 @@ class Ui_MainWindow(object):
         self.go.setText(_translate("MainWindow", "Go!"))
         self.label_2.setText(_translate("MainWindow", "Jump:"))
         self.format.setText(_translate("MainWindow", "Select Label Format"))
-        self.menuhelp.setTitle(_translate("MainWindow", "帮助"))
-        self.actioninstructions.setText(_translate("MainWindow", "使用说明"))
-        self.actionabout.setText(_translate("MainWindow", "关于软件"))
 
 
 if __name__ == "__main__":
