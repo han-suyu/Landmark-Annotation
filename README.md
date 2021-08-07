@@ -29,8 +29,7 @@ pprp这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所�
 
 - 整体外观
 
-  ![](https://z3.ax1x.com/2021/08/06/fuZvwt.png)
-
+  ![](https://z3.ax1x.com/2021/08/07/fKmq7n.png)
 
 
 
@@ -95,5 +94,5 @@ pprp这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所�
 
 
 
-**过程不易，给个star~**
+**代码注释非常详细，过程不易，给个star~**
 
