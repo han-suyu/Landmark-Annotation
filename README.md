@@ -1,7 +1,7 @@
 ## 为什么做这个
 
-自己经常遇到点标注的工作，目前网上比较好用的就是[labelme](https://github.com/wkentaro/labelme)，但是它只能生成json格式的标签，想要别的格式只能来回地写转换脚本。
-另外还有pprp开源的[landmark_annotation](https://github.com/pprp/landmark_annotation)，介绍说标签格式转换可以在源码中修改，另外这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所以首先打算换一个框架来实现自己的版本。
+自己经常遇到点标注的工作，目前网上比较好用的就是 [labelme](https://github.com/wkentaro/labelme)，但是它只能生成json格式的标签，想要别的格式只能来回地写转换脚本。
+另外还有pprp开源的 [landmark_annotation](https://github.com/pprp/landmark_annotation)，介绍说标签格式转换可以在源码中修改，另外这份代码是基于tkinter实现的，由于自己使用pyqt5更多，所以打算换一个框架来实现自己的版本。
 
 其次，我个人感觉这个软件还有一些功能没有很完善。主要有以下几点：
 
