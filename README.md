@@ -22,7 +22,7 @@
 
 - 整体外观
 
-  ![](https://z3.ax1x.com/2021/08/07/fKmq7n.png)
+  ![](https://picsy.oss-cn-qingdao.aliyuncs.com/images/20210807-fKmq7n.png)
 
 
 
