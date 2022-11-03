@@ -22,8 +22,7 @@
 
 - 整体外观
 
-  ![](https://picsy.oss-cn-qingdao.aliyuncs.com/images/20210807/20210807-fKmq7n.png)
-
+  ![](https://picsy.oss-cn-qingdao.aliyuncs.com/images/202108/20210807-fKmq7n.png)
 
 
 
