@@ -245,8 +245,14 @@ class MyMainForm(QMainWindow,Ui_MainWindow):     # 静态加载 UI 文件
         
 
 
-        # 加载标签
-        self.labelpath = self.outDir +'/'+ self.imageList[self.cur ].split('.')[0]+'.'+self.label_format
+        # 加载标签        
+        img_name_parts = self.imageList[self.cur ].split('.')
+        img_name = ''
+        for part in range(len(img_name_parts)-1):
+            img_name = img_name+img_name_parts[part] + '.'
+        self.labelpath = self.outDir +'/'+ img_name + self.label_format
+
+        # self.labelpath = self.outDir +'/'+ self.imageList[self.cur ].split('.')[0] + '.' + self.label_format
         if os.path.exists(self.labelpath):
             # txt的读取方式和其他有点不一样，先单拿出来
             if self.label_format=='txt':   
